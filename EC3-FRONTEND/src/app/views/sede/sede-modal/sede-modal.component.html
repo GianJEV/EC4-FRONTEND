@@ -1,0 +1,11 @@
+<mat-form-field appearance="fill">
+    <mat-label>SEDE</mat-label>
+    <input matInput placeholder="Sede" [(ngModel)]="sede.sede">
+</mat-form-field>
+
+<div>
+    <button mat-flat-button color="primary" (click)="modificar()">Guardar
+    </button>
+    <button mat-flat-button color="warn" (click)="cancelar()">Cancelar
+    </button>
+</div>

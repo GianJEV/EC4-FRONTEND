@@ -1,0 +1,56 @@
+<mat-form-field appearance="fill">
+    <mat-label>DNI</mat-label>
+    <input matInput placeholder="Dni" [(ngModel)]="estudiante.dni">
+</mat-form-field>
+<mat-form-field appearance="fill">
+    <mat-label>NOMBRES</mat-label>
+    <input matInput placeholder="Nombres" [(ngModel)]="estudiante.nombres">
+</mat-form-field>
+<mat-form-field appearance="fill">
+    <mat-label>APELLIDOS</mat-label>
+    <input matInput placeholder="Apellidos" [(ngModel)]="estudiante.apellidos">
+</mat-form-field>
+<mat-form-field appearance="fill">
+    <mat-label>DIRECCION</mat-label>
+    <input matInput placeholder="Direccion" [(ngModel)]="estudiante.direccion">
+</mat-form-field>
+<mat-form-field appearance="fill">
+    <mat-label>EMAIL</mat-label>
+    <input matInput placeholder="Email" [(ngModel)]="estudiante.email">
+</mat-form-field>
+<mat-form-field appearance="fill">
+    <mat-label>NUMERO</mat-label>
+    <input matInput placeholder="Numero" [(ngModel)]="estudiante.numero">
+</mat-form-field>
+<mat-form-field appearance="fill">
+    <mat-label>CICLO</mat-label>
+    <input matInput placeholder="Ciclo" [(ngModel)]="estudiante.ciclo">
+</mat-form-field>
+
+<div>
+    <mat-form-field appearance="fill">
+        <mat-label *ngIf="estudiante.carrera">{{estudiante.carrera.carrera}}</mat-label>
+        <mat-select matInput placeholder="Seleccione una carrera" [(ngModel)]="estudiante.carrera">
+            <mat-option *ngFor="let c of carrera" [value]="c">
+                {{c.carrera}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+        <mat-label *ngIf="estudiante.sede">{{estudiante.sede.sede}}</mat-label>
+        <mat-select matInput placeholder="Seleccione una sede" [(ngModel)]="estudiante.sede">
+            <mat-option *ngFor="let s of sede" [value]="s">
+                {{s.sede}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+
+
+<div>
+    <button mat-flat-button color="primary" (click)="modificar()">Guardar
+    </button>
+    <button mat-flat-button color="warn" (click)="cancelar()">Cancelar
+    </button>
+</div>  

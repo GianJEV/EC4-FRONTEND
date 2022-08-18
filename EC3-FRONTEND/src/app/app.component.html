@@ -1,0 +1,63 @@
+<head>
+    <meta charset="utf-8">
+    <title>Evaluacion Final - Dessarrollo Avanzado de Aplicaciones 2</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Proyecto
+                Instituto</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" routerLink="/" routerLinkActive="active"
+                            ariaCurrentWhenActive="page">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/carrera" routerLinkActive="active"
+                            ariaCurrentWhenActive="page">Carrera</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/sede" routerLinkActive="active"
+                            ariaCurrentWhenActive="page">Sede</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/docente" routerLinkActive="active"
+                            ariaCurrentWhenActive="page">Docente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/estudiante" routerLinkActive="active"
+                            ariaCurrentWhenActive="page">Estudiante</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-3 pb-5">
+        <router-outlet></router-outlet>
+    </div>
+
+    <div class="footer-copyright text-center">
+        <h1>Diseñado por:</h1>
+        <ul class="list-unstyled mb-0">
+            <li class="text-dark">Giancarlo Estela Ventura</li>
+            <li class="text-dark">Adrian Celis Torres</li>
+            <li class="text-dark">Carlos Chumpitaz Linares</li>
+            <li class="text-dark">Airon Javier Carranza Díaz</li>
+        </ul>
+        <h2 class="text-large">Copyright © 2022</h2>
+    </div>
+</body>
